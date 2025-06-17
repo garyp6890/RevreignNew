@@ -1,1 +1,0 @@
-const s=!1,e="Example Template",t="",n="",a="",o="",l={warning:"⚠️ Only advanced users should touch this. Changing anything here may break the page layout.",experimentalFeatureToggle:!1},c={enabled:!1,title:e,intro:t,body:n,ctaText:a,ctaLink:o,developerSettings:l};export{n as body,o as ctaLink,a as ctaText,c as default,l as developerSettings,s as enabled,t as intro,e as title};
