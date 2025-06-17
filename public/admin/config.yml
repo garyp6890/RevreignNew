@@ -1,6 +1,8 @@
 backend:
   name: git-gateway
   branch: main
+  repo: your-username/your-repo-name
+  site_domain: bodyblow.io
 
 media_folder: "public/images"
 public_folder: "/images"
