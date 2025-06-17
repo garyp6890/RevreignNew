@@ -1,6 +1,5 @@
 {
   "enabled": true,
-
   "hero": {
     "enabled": true,
     "title": "Partnerships & Sponsorships",
@@ -9,7 +8,6 @@
     "contactMailto": "mailto:revreignauto@gmail.com",
     "contactButtonText": "Contact Me for Sponsorships"
   },
-
   "statsSection": {
     "enabled": true,
     "title": "Audience & Engagement",
@@ -34,13 +32,12 @@
       }
     ]
   },
-
   "pastWork": {
     "enabled": true,
     "title": "Past Collaborations",
     "items": [
       {
-        "image": "https://images.unsplash.com/photo-1622042991322-9fa8dd98713d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+        "image": "/images/caveman-mechanics.jpg",
         "altText": "Welding Tools",
         "title": "Welding Tools Showcase",
         "description": "Demonstrated the functionality and benefits of premium welding equipment through a series of tutorial videos.",
@@ -65,7 +62,6 @@
       }
     ]
   },
-
   "upcomingProjects": {
     "enabled": true,
     "title": "Upcoming Projects",
@@ -87,7 +83,6 @@
       }
     ]
   },
-
   "rateCard": {
     "enabled": true,
     "title": "Partnership Rates",
@@ -96,26 +91,43 @@
       {
         "platform": "TikTok & Instagram",
         "rates": [
-          { "label": "Single Post/Reel", "value": "$500+" },
-          { "label": "Multi-Post Campaign", "value": "$1,200+" },
-          { "label": "24h Story Takeover", "value": "$300+" }
+          {
+            "label": "Single Post/Reel",
+            "value": "$500+"
+          },
+          {
+            "label": "Multi-Post Campaign",
+            "value": "$1,200+"
+          },
+          {
+            "label": "24h Story Takeover",
+            "value": "$300+"
+          }
         ]
       },
       {
         "platform": "YouTube",
         "rates": [
-          { "label": "Dedicated Review", "value": "$1,000+" },
-          { "label": "Integration (60-90 sec)", "value": "$750+" },
-          { "label": "Series Sponsorship", "value": "$2,500+" }
+          {
+            "label": "Dedicated Review",
+            "value": "$1,000+"
+          },
+          {
+            "label": "Integration (60-90 sec)",
+            "value": "$750+"
+          },
+          {
+            "label": "Series Sponsorship",
+            "value": "$2,500+"
+          }
         ]
       }
     ],
     "contactMailto": "mailto:revreignauto@gmail.com",
     "contactButtonText": "Contact For Custom Quote",
-    "downloadLink": "#", 
+    "downloadLink": "#",
     "downloadButtonText": "Download Full Rate Card"
   },
-
   "contactCTA": {
     "enabled": true,
     "title": "Ready to Collaborate?",
@@ -123,7 +135,6 @@
     "contactMailto": "mailto:revreignauto@gmail.com",
     "contactButtonText": "revreignauto@gmail.com"
   },
-
   "developerSettings": {
     "warning": "⚠️ Only advanced users should touch this. Changing anything here may break the layout.",
     "experimentalFeatureToggle": false
