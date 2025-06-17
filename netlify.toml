@@ -13,6 +13,12 @@
   to = "/admin/index.html"
   status = 200
 
+# Serve JSON files with correct MIME type
+[[headers]]
+  for = "*.json"
+  [headers.values]
+    Content-Type = "application/json"
+
 # Ensure Netlify Identity service works
 [[headers]]
   for = "/*"
