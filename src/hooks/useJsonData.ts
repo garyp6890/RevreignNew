@@ -4,11 +4,16 @@ export function useJsonData<T>(filePath: string) {
   return useAsyncData<T>(
     async () => {
       try {
-        // Convert relative path to absolute path for fetch
-        const cleanPath = filePath.replace('../', '/src/');
+        // In development, use dynamic imports
+        if (import.meta.env.DEV) {
+          const module = await import(filePath);
+          return module.default || module;
+        }
         
-        // Use fetch for production builds
+        // In production, use fetch with correct path
+        const cleanPath = filePath.replace('../data/', '/src/data/');
         const response = await fetch(cleanPath);
+        
         if (!response.ok) {
           throw new Error(`Failed to fetch ${cleanPath}: ${response.status}`);
         }
