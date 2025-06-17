@@ -4,7 +4,7 @@
     "enabled": true,
     "title": "Partnerships & Sponsorships",
     "subtitle": "Looking to collaborate with an automotive influencer who connects with over 290k followers across platforms? Let's work together to create engaging sponsored content that resonates with car enthusiasts worldwide.",
-    "backgroundImage": "https://images.unsplash.com/photo-1524591652733-73fa1ae7b5ee?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
+    "backgroundImage": "/images/caveman-hero.png",
     "contactMailto": "mailto:revreignauto@gmail.com",
     "contactButtonText": "Contact Me for Sponsorships"
   },
@@ -37,26 +37,26 @@
     "title": "Past Collaborations",
     "items": [
       {
-        "image": "/images/caveman-mechanics.jpg",
-        "altText": "Welding Tools",
-        "title": "Welding Tools Showcase",
-        "description": "Demonstrated the functionality and benefits of premium welding equipment through a series of tutorial videos.",
+        "image": "/images/pennzoil.webp",
+        "altText": "Pennzoil picture with Revreign",
+        "title": "Pennzoil Collaboration",
+        "description": "Demonstrated the functionality and benefits of utilizing high-quality engine oil. ",
         "icon": "trendingUp",
         "statText": "22% engagement rate"
       },
       {
-        "image": "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-        "altText": "Car Parts Review",
-        "title": "Performance Parts Review",
-        "description": "Comprehensive testing and installation of aftermarket performance parts with before/after results.",
+        "image": "/images/making-car-flame.webp",
+        "altText": "Several Car tuning brands",
+        "title": "Tailpipe Flame Thrower",
+        "description": "Showcased the comprehensive capabilities of various software utilized in the performance auto industry.",
         "icon": "trendingUp",
         "statText": "18% engagement rate"
       },
       {
-        "image": "https://images.unsplash.com/photo-1593784991095-a205069470b6?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-        "altText": "Tool Comparison",
+        "image": "/images/tribotex-collaboration.webp",
+        "altText": "TriboTex Logo with a car engine in the background. ",
         "title": "Budget vs. Premium Tools",
-        "description": "Side-by-side comparison of budget-friendly and professional-grade automotive tools to help viewers make informed decisions.",
+        "description": "Showcasing how an easy to use product can increase a vehicles lifecycle tenfold. ",
         "icon": "trendingUp",
         "statText": "25% engagement rate"
       }
