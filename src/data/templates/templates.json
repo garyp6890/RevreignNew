@@ -1,10 +1,10 @@
 {
-  "enabled": false,
+  "enabled": true,
   "title": "Example Template",
-  "intro": "",
-  "body": "",
-  "ctaText": "",
-  "ctaLink": "",
+  "intro": "This is an example template page that demonstrates the template system.",
+  "body": "## Welcome to the Template System\n\nThis is a sample template that shows how you can create custom pages using the CMS.\n\n### Features\n\n- Markdown support\n- Custom intro text\n- Call-to-action buttons\n- Developer settings\n\n### Getting Started\n\n1. Edit this template in the admin panel\n2. Create new templates as needed\n3. Customize the content to match your needs\n\nThis template system allows you to create flexible, content-managed pages without touching code.",
+  "ctaText": "Learn More",
+  "ctaLink": "/links",
   "developerSettings": {
     "warning": "⚠️ Only advanced users should touch this. Changing anything here may break the page layout.",
     "experimentalFeatureToggle": false
