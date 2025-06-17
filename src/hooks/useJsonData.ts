@@ -5,7 +5,7 @@ export function useJsonData<T>(filePath: string) {
     async () => {
       try {
         // Convert relative path to absolute path for fetch
-        const cleanPath = filePath.replace('../', '/');
+        const cleanPath = filePath.replace('../', '/src/');
         
         // Use fetch for production builds
         const response = await fetch(cleanPath);
