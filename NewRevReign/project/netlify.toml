@@ -1,6 +1,6 @@
 [build]
-  command = "npm run build"
-  publish = "dist"
+  command = "cd NewRevReign/project && npm run build"
+  publish = "NewRevReign/project/dist"
 
 [[redirects]]
   from = "/*"
