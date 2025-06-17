@@ -7,7 +7,6 @@ backend:
 media_folder: "public/images"
 public_folder: "/images"
 
-# Enable editorial workflow globally
 publish_mode: editorial_workflow
 
 collections:
