@@ -1,9 +1,7 @@
 {
   "enabled": true,
-
   "pageTitle": "Walmart Storefront",
-  "introText": "Discover affordable tools and products for DIY mechanics through my Walmart storefront. Every purchase helps support my content creation journey while saving you money on quality automotive supplies!",
-
+  "introText": "Discover affordable tools and products for DIY mechanics through my Walmart storefront. Every purchase helps support my content creation journey while savinHg you money on quality automotive supplies!",
   "banner": {
     "enabled": true,
     "title": "Budget-Friendly Auto Tools",
@@ -13,7 +11,6 @@
     "storeLink": "https://walmart.com",
     "buttonText": "Shop My Walmart Picks"
   },
-
   "categories": [
     {
       "enabled": true,
@@ -144,7 +141,6 @@
       ]
     }
   ],
-
   "developerSettings": {
     "warning": "⚠️ Only advanced users should touch this. Changing anything here may break the layout.",
     "experimentalFeatureToggle": false
