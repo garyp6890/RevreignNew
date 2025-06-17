@@ -1,8 +1,8 @@
 import React from 'react';
-import { useJsonData } from '../hooks/useJsonData';
 import LoadingSpinner from '../components/ui/LoadingSpinner';
 import SocialButton from '../components/SocialButton';
 import { TikTok, Instagram, Youtube } from '../components/SocialIcons';
+import linksData from '../data/links.json';
 import type { LinksData } from '../types';
 
 const iconMap = {
@@ -12,17 +12,9 @@ const iconMap = {
 };
 
 const Links: React.FC = () => {
-  const { data: linksData, loading, error } = useJsonData<LinksData>('../data/links.json');
+  const typedLinksData = linksData as LinksData;
 
-  if (loading) {
-    return (
-      <div className="min-h-screen flex items-center justify-center bg-rev-light">
-        <LoadingSpinner size="lg" />
-      </div>
-    );
-  }
-
-  if (error || !linksData || !linksData.enabled) {
+  if (!typedLinksData || !typedLinksData.enabled) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-rev-light">
         <div className="text-center">
@@ -34,7 +26,7 @@ const Links: React.FC = () => {
     );
   }
 
-  const { pageTitle, introText, socialLinks, reasonBlock } = linksData;
+  const { pageTitle, introText, socialLinks, reasonBlock } = typedLinksData;
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-rev-beige/30 to-white py-12">
