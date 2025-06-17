@@ -1,7 +1,7 @@
 backend:
   name: git-gateway
   branch: main
-  repo: your-username/your-repo-name
+  repo: garyp6890/RevreignNew
   site_domain: bodyblow.io
 
 media_folder: "public/images"
