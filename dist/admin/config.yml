@@ -12,29 +12,31 @@ collections:
   # ------------------------------------------------------------
   # 1) Homepage (src/data/home.json)
   # ------------------------------------------------------------
-  - name: "home"
-    label: "Homepage"
-    files:
-      - label: "Homepage Content"
-        name: "home"
-        file: "src/data/home.json"
-        fields:
-          - label: "Enable Homepage"
-            name: "enabled"
-            widget: "boolean"
-            default: true
-            hint: "Toggle the entire homepage on/off."
-          - label: "Hero Section"
-            name: "hero"
-            widget: "object"
-            fields:
-              - { label: "Enable Hero", name: "enabled", widget: "boolean", default: true, hint: "Toggle Hero on/off." }
-              - { label: "Title", name: "title", widget: "string", hint: "Main headline text." }
-              - { label: "Subtitle", name: "subtitle", widget: "string", hint: "Subheadline beneath title." }
-              - { label: "Description", name: "description", widget: "text", hint: "Intro paragraph." }
-              - { label: "Background Image", name: "backgroundImage", widget: "image", hint: "Full-width background image URL or upload." }
-              - { label: "Primary CTA Text", name: "cta1Text", widget: "string", hint: "First button text." }
-              - { label: "Secondary CTA Text", name: "cta2Text", widget: "string", hint: "Second button text." }
+- name: "home"
+  label: "Homepage"
+  files:
+    - label: "Homepage Content"
+      name: "home"
+      file: "src/data/home.json"
+      fields:
+        - { label: "Title", name: "title", widget: "string", default: "Homepage" }
+        - { label: "Slug", name: "slug", widget: "string", default: "home" }
+        - label: "Enable Homepage"
+          name: "enabled"
+          widget: "boolean"
+          default: true
+          hint: "Toggle the entire homepage on/off."
+        - label: "Hero Section"
+          name: "hero"
+          widget: "object"
+          fields:
+            - { label: "Enable Hero", name: "enabled", widget: "boolean", default: true, hint: "Toggle Hero on/off." }
+            - { label: "Title", name: "title", widget: "string", hint: "Main headline text." }
+            - { label: "Subtitle", name: "subtitle", widget: "string", hint: "Subheadline beneath title." }
+            - { label: "Description", name: "description", widget: "text", hint: "Intro paragraph." }
+            - { label: "Background Image", name: "backgroundImage", widget: "image", hint: "Full-width background image URL or upload." }
+            - { label: "Primary CTA Text", name: "cta1Text", widget: "string", hint: "First button text." }
+            - { label: "Secondary CTA Text", name: "cta2Text", widget: "string", hint: "Second button text." }
           - label: "About Section"
             name: "about"
             widget: "object"
@@ -371,3 +373,5 @@ collections:
         fields:
           - { label: "Warning", name: "warning", widget: "text", default: "⚠️ Only advanced users should touch this. Changing anything here may break the page layout.", hint: "Do not edit unless you know what you're doing." }
           - { label: "Experimental Toggle", name: "experimentalFeatureToggle", widget: "boolean", default: false, hint: "Reserved for developer testing." }
+          - { label: "Title", name: "title", widget: "string", default: "Homepage" }
+- { label: "Slug", name: "slug", widget: "string", default: "home", hint: "Used for editorial workflow" }
