@@ -1,47 +1,56 @@
-// File: src/App.tsx
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { ThemeProvider } from './context/ThemeContext';
+import ErrorBoundary from './components/ui/ErrorBoundary';
+import LoadingSpinner from './components/ui/LoadingSpinner';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import Home from './pages/Home';
-import Links from './pages/Links';
-import AmazonStorefront from './pages/AmazonStorefront';
-import WalmartStorefront from './pages/WalmartStorefront';
-import Partnerships from './pages/Partnerships';
-import Merchandise from './pages/Merchandise';
-import TemplatePage from './pages/TemplatePage';
 import ScrollToTop from './components/ScrollToTop';
 import ThemeToggle from './components/ThemeToggle';
-import { ThemeProvider } from './context/ThemeContext';
+import { ROUTES } from './utils/constants';
+
+// Lazy load pages for better performance
+const Home = lazy(() => import('./pages/Home'));
+const Links = lazy(() => import('./pages/Links'));
+const AmazonStorefront = lazy(() => import('./pages/AmazonStorefront'));
+const WalmartStorefront = lazy(() => import('./pages/WalmartStorefront'));
+const Partnerships = lazy(() => import('./pages/Partnerships'));
+const Merchandise = lazy(() => import('./pages/Merchandise'));
+const TemplatePage = lazy(() => import('./pages/TemplatePage'));
+
+const LoadingFallback = () => (
+  <div className="min-h-screen flex items-center justify-center bg-rev-light">
+    <LoadingSpinner size="lg" />
+  </div>
+);
 
 function App() {
   return (
-    <ThemeProvider>
-      <Router>
-        <div className="flex flex-col min-h-screen">
-          <Header />
-          <main className="flex-grow">
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/links" element={<Links />} />
-              <Route path="/amazon" element={<AmazonStorefront />} />
-              <Route path="/walmart" element={<WalmartStorefront />} />
-              <Route path="/partnerships" element={<Partnerships />} />
-              <Route path="/merchandise" element={<Merchandise />} />
-
-              {/* Template-driven pages: slug-based */}
-              <Route path="/page/:slug" element={<TemplatePage />} />
-
-              {/* Optional: catch-all 404 route (if you have a NotFound component) */}
-              {/* <Route path="*" element={<NotFound />} /> */}
-            </Routes>
-          </main>
-          <Footer />
-          <ScrollToTop />
-          <ThemeToggle />
-        </div>
-      </Router>
-    </ThemeProvider>
+    <ErrorBoundary>
+      <ThemeProvider>
+        <Router>
+          <div className="flex flex-col min-h-screen">
+            <Header />
+            <main className="flex-grow">
+              <Suspense fallback={<LoadingFallback />}>
+                <Routes>
+                  <Route path={ROUTES.HOME} element={<Home />} />
+                  <Route path={ROUTES.LINKS} element={<Links />} />
+                  <Route path={ROUTES.AMAZON} element={<AmazonStorefront />} />
+                  <Route path={ROUTES.WALMART} element={<WalmartStorefront />} />
+                  <Route path={ROUTES.PARTNERSHIPS} element={<Partnerships />} />
+                  <Route path={ROUTES.MERCHANDISE} element={<Merchandise />} />
+                  <Route path={ROUTES.PAGE} element={<TemplatePage />} />
+                </Routes>
+              </Suspense>
+            </main>
+            <Footer />
+            <ScrollToTop />
+            <ThemeToggle />
+          </div>
+        </Router>
+      </ThemeProvider>
+    </ErrorBoundary>
   );
 }
 

@@ -1,19 +1,44 @@
-// File: src/pages/Links.tsx
 import React from 'react';
+import { useJsonData } from '../hooks/useJsonData';
+import LoadingSpinner from '../components/ui/LoadingSpinner';
 import SocialButton from '../components/SocialButton';
 import { TikTok, Instagram, Youtube } from '../components/SocialIcons';
-import linksContent from '../data/links.json';
+import type { LinksData } from '../types';
+
+const iconMap = {
+  tiktok: TikTok,
+  instagram: Instagram,
+  youtube: Youtube
+};
 
 const Links: React.FC = () => {
-  // If the Links page is toggled off, render nothing
-  if (!linksContent.enabled) return null;
+  const { data: linksData, loading, error } = useJsonData<LinksData>('../data/links.json');
 
-  const { pageTitle, introText, socialLinks, reasonBlock } = linksContent;
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-rev-light">
+        <LoadingSpinner size="lg" />
+      </div>
+    );
+  }
+
+  if (error || !linksData || !linksData.enabled) {
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-rev-light">
+        <div className="text-center">
+          <h2 className="text-2xl font-bold text-rev-brown mb-4">
+            Page not available
+          </h2>
+        </div>
+      </div>
+    );
+  }
+
+  const { pageTitle, introText, socialLinks, reasonBlock } = linksData;
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-rev-beige/30 to-white py-12">
       <div className="container mx-auto px-4">
-        {/* Page Header */}
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-rev-brown mb-4 font-heading">
             {pageTitle}
@@ -21,29 +46,22 @@ const Links: React.FC = () => {
           <p className="text-gray-700 max-w-2xl mx-auto">{introText}</p>
         </div>
 
-        {/* Social Buttons */}
         <div className="max-w-4xl mx-auto space-y-6">
           {socialLinks.map((link, idx) => {
-            // Determine which icon component to use based on the platform
-            let IconComponent = null;
-            if (link.platform === 'tiktok') IconComponent = <TikTok size={32} />;
-            else if (link.platform === 'instagram') IconComponent = <Instagram size={32} />;
-            else if (link.platform === 'youtube') IconComponent = <Youtube size={32} />;
-            // Fallback: if no platform match, leave IconComponent null
-
+            const IconComponent = iconMap[link.platform as keyof typeof iconMap];
+            
             return (
               <SocialButton
                 key={idx}
-                platform={link.platform}
+                platform={link.platform as any}
                 username={link.username}
                 followers={link.followers}
                 url={link.url}
-                icon={IconComponent}
+                icon={IconComponent ? <IconComponent size={32} /> : null}
               />
             );
           })}
 
-          {/* “Why Follow” Section */}
           {reasonBlock.enabled && (
             <div className="mt-12 bg-rev-dark text-white p-8 rounded-xl shadow-xl">
               <h2 className="text-2xl font-bold mb-4 text-rev-orange font-heading">
@@ -51,7 +69,7 @@ const Links: React.FC = () => {
               </h2>
               <div className="space-y-4 text-gray-200">
                 {reasonBlock.paragraphs.map((paragraph, idx) => (
-                  <p key={idx}>{paragraph}</p>
+                  <p key={idx}>{paragraph.text}</p>
                 ))}
               </div>
             </div>

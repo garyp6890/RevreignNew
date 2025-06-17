@@ -1,10 +1,27 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Mail, ShoppingBag } from 'lucide-react';
+import { Mail } from 'lucide-react';
 import { TikTok, Instagram, Youtube } from './SocialIcons';
+import { ROUTES, SOCIAL_LINKS } from '../utils/constants';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
+
+  const navigationItems = [
+    { path: ROUTES.HOME, label: 'Home' },
+    { path: ROUTES.LINKS, label: 'My Links' },
+    { path: ROUTES.PARTNERSHIPS, label: 'Partner With Us' },
+    { path: ROUTES.MERCHANDISE, label: 'Merchandise' },
+    { path: ROUTES.AMAZON, label: 'Amazon Store' },
+    { path: ROUTES.WALMART, label: 'Walmart Store' }
+  ];
+
+  const socialItems = [
+    { href: SOCIAL_LINKS.TIKTOK, icon: TikTok, label: 'TikTok' },
+    { href: SOCIAL_LINKS.INSTAGRAM, icon: Instagram, label: 'Instagram' },
+    { href: SOCIAL_LINKS.YOUTUBE, icon: Youtube, label: 'YouTube' },
+    { href: SOCIAL_LINKS.EMAIL, icon: Mail, label: 'Email' }
+  ];
 
   return (
     <footer className="bg-rev-brown text-rev-light py-10">
@@ -21,50 +38,34 @@ const Footer: React.FC = () => {
           </div>
 
           <nav className="grid grid-cols-2 gap-4 mb-6 md:mb-0">
-            <Link to="/" className="hover:text-rev-orange transition-colors">Home</Link>
-            <Link to="/links" className="hover:text-rev-orange transition-colors">My Links</Link>
-            <Link to="/partnerships" className="hover:text-rev-orange transition-colors">Partner With Us</Link>
-            <Link to="/merchandise" className="hover:text-rev-orange transition-colors">Merchandise</Link>
-            <Link to="/amazon" className="hover:text-rev-orange transition-colors">Amazon Store</Link>
-            <Link to="/walmart" className="hover:text-rev-orange transition-colors">Walmart Store</Link>
+            {navigationItems.map((item) => (
+              <Link 
+                key={item.path}
+                to={item.path}
+                className="hover:text-rev-orange transition-colors"
+              >
+                {item.label}
+              </Link>
+            ))}
           </nav>
 
           <div className="flex flex-col items-center md:items-end">
             <div className="flex space-x-4 mb-4">
-              <a 
-                href="https://tiktok.com/@revreignofficial" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="hover:text-rev-orange transition-colors"
-                aria-label="TikTok"
-              >
-                <TikTok size={24} />
-              </a>
-              <a 
-                href="https://instagram.com/revreignauto" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="hover:text-rev-orange transition-colors"
-                aria-label="Instagram"
-              >
-                <Instagram size={24} />
-              </a>
-              <a 
-                href="https://youtube.com/@revreign" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="hover:text-rev-orange transition-colors"
-                aria-label="YouTube"
-              >
-                <Youtube size={24} />
-              </a>
-              <a 
-                href="mailto:revreignauto@gmail.com" 
-                className="hover:text-rev-orange transition-colors"
-                aria-label="Email"
-              >
-                <Mail size={24} />
-              </a>
+              {socialItems.map((item) => {
+                const IconComponent = item.icon;
+                return (
+                  <a 
+                    key={item.href}
+                    href={item.href}
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="hover:text-rev-orange transition-colors"
+                    aria-label={item.label}
+                  >
+                    <IconComponent size={24} />
+                  </a>
+                );
+              })}
             </div>
             <div className="text-sm text-gray-300">
               <p className="mb-1">Contact: revreignauto@gmail.com</p>
@@ -77,4 +78,4 @@ const Footer: React.FC = () => {
   );
 };
 
-export default Footer;
+export default React.memo(Footer);
