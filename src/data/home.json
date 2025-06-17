@@ -13,7 +13,7 @@
     "enabled": true,
     "title": "About Revreign",
     "description": "Revreign is Jack—a car enthusiast and social media creator who brings humor, education, and DIY car culture to life across TikTok, Instagram, and YouTube. Known for his 'Caveman Mechanics' skits and turbocharger tutorials, he's here to entertain and inspire automotive enthusiasts worldwide.",
-    "image": "https://images.unsplash.com/photo-1600661653561-629509216228?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    "image": "/images/indownloader.app_picture_0201109001748585219.webp",
     "altText": "Car Enthusiast Working on Engine",
     "showSocialStats": true
   },
@@ -23,16 +23,16 @@
     "description": "Show your support with our exclusive Caveman-themed merchandise. Each purchase helps fuel more automotive content!",
     "items": [
       {
-        "image1": "/images/rev3.png",
-        "image2": "https://images.pexels.com/photos/10415390/pexels-photo-10415390.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "image1": "/images/caveman-race-team-brown.webp",
+        "image2": "/images/caveman-race-realism.png",
         "title": "Caveman Race Team T-shirt",
         "description": "Premium cotton tee featuring our signature Caveman Race Team logo with the classic \"UGGA DUGGA\" car repair catchphrase. Available in multiple sizes.",
         "buyLink": "#",
         "ctaText": "Buy Now - $29.99"
       },
       {
-        "image1": "https://images.pexels.com/photos/6976103/pexels-photo-6976103.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-        "image2": "https://images.pexels.com/photos/5384445/pexels-photo-5384445.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        "image1": "/images/t-shirt-color-ugga.webp",
+        "image2": "/images/www.revreign.com.webp",
         "title": "Caveman Mechanics T-shirt",
         "description": "Soft and durable tee with the iconic Caveman Mechanics design featuring our mascot with thumbs up and \"MECH-AN-ICS\" lettering. Perfect for garage days!",
         "buyLink": "#",
@@ -44,7 +44,7 @@
     "enabled": true,
     "title": "Partner With Revreign",
     "description": "Looking to collaborate with an automotive influencer who connects with over 290k followers across platforms? Let's work together to create engaging sponsored content that resonates with car enthusiasts worldwide.",
-    "image": "https://images.unsplash.com/photo-1493238792000-8113da705763?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+    "image": "/images/caveman-cartoon.png",
     "altText": "Car Workshop",
     "stats": [
       {
