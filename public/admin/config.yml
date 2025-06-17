@@ -48,7 +48,7 @@ collections:
         format: "json"
         fields:
           - { label: "Title", name: "title", widget: "string", default: "Homepage" }
-          - { label: "Slug",  name: "slug",  widget: "string", default: "home" }
+          - { label: "Slug", name: "slug", widget: "string", default: "home" }
           - { label: "Enable Homepage", name: "enabled", widget: "boolean", default: true }
           - label: "Hero Section"
             name: "hero"
@@ -133,24 +133,24 @@ collections:
         format: "json"
         fields:
           - { label: "Title", name: "title", widget: "string", default: "Connect With Revreign" }
-          - { label: "Slug",  name: "slug",  widget: "string", default: "links" }
+          - { label: "Slug", name: "slug", widget: "string", default: "links" }
           - { label: "Enable Page", name: "enabled", widget: "boolean", default: true }
-          - { label: "Page Title",  name: "pageTitle", widget: "string" }
-          - { label: "Intro Text",  name: "introText", widget: "text" }
+          - { label: "Page Title", name: "pageTitle", widget: "string" }
+          - { label: "Intro Text", name: "introText", widget: "text" }
           - label: "Social Links"
             name: "socialLinks"
             widget: "list"
             fields:
-              - { label: "Platform",  name: "platform",  widget: "string" }
-              - { label: "Username",  name: "username",  widget: "string" }
+              - { label: "Platform", name: "platform", widget: "string" }
+              - { label: "Username", name: "username", widget: "string" }
               - { label: "Followers", name: "followers", widget: "string" }
-              - { label: "URL",       name: "url",       widget: "string" }
+              - { label: "URL", name: "url", widget: "string" }
           - label: "Why Follow Section"
             name: "reasonBlock"
             widget: "object"
             fields:
               - { label: "Enable Why Follow", name: "enabled", widget: "boolean", default: true }
-              - { label: "Section Title",     name: "title",   widget: "string" }
+              - { label: "Section Title", name: "title", widget: "string" }
               - label: "Paragraphs"
                 name: "paragraphs"
                 widget: "list"
@@ -354,5 +354,5 @@ collections:
         name: "developerSettings"
         widget: "object"
         fields:
-          - { label: "Warning", name: "warning", widget: "text", default: "⚠️ Only advanced users should…" }
+          - { label: "Warning", name: "warning", widget: "text", default: "⚠️ Only advanced users should touch this. Changing anything here may break the page layout." }
           - { label: "Experimental Toggle", name: "experimentalFeatureToggle", widget: "boolean", default: false }
