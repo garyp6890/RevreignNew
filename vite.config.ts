@@ -13,6 +13,4 @@ export default defineConfig({
   },
   // Ensure the admin folder is copied to dist during build
   publicDir: 'public',
-  // Copy JSON files to the build output
-  assetsInclude: ['**/*.json']
 });
