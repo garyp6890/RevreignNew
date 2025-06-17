@@ -1,0 +1,36 @@
+{
+  "enabled": true,
+  "pageTitle": "Connect With Revreign",
+  "introText": "Follow, message, or share my automotive content across all platforms. Join over 290k followers in the community of car enthusiasts!",
+
+  "socialLinks": [
+    {
+      "platform": "tiktok",
+      "username": "@revreignofficial",
+      "followers": "185k followers",
+      "url": "https://www.tiktok.com/@revreignofficial"
+    },
+    {
+      "platform": "instagram",
+      "username": "@revreignauto",
+      "followers": "103k followers",
+      "url": "https://www.instagram.com/revreignauto"
+    },
+    {
+      "platform": "youtube",
+      "username": "@revreign",
+      "followers": "2.79k subscribers",
+      "url": "https://www.youtube.com/@revreign"
+    }
+  ],
+
+  "reasonBlock": {
+    "enabled": true,
+    "title": "Why Follow Revreign?",
+    "paragraphs": [
+      "Revreign stands out in the crowded world of social media influencers by combining technical expertise with creativity. Whether you're a seasoned mechanic or a casual car enthusiast, my content offers something for everyone.",
+      "From the viral \"Caveman Mechanics\" series to detailed turbocharger tutorials, I'm here to educate, entertain, and inspire your automotive journey.",
+      "Join our growing community of automotive enthusiasts who follow Revreign for laughs, learning, and all things cars!"
+    ]
+  }
+}
