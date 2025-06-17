@@ -9,19 +9,29 @@ export function useMerchandise() {
   useEffect(() => {
     const loadMerchandise = async () => {
       try {
-        // Use dynamic imports with glob pattern
-        const modules = import.meta.glob('../data/merchandise/*.json', { eager: true });
-        const items: MerchandiseItem[] = Object.values(modules).map((mod: any, idx) => ({
-          id: mod.id || `merch-${idx + 1}`,
-          title: mod.title,
-          description: mod.description,
-          price: mod.price,
-          image: mod.image,
-          buyLink: mod.buyLink,
-          shopifyProductId: mod.shopifyProductId || undefined
-        }));
+        // For production, we'll use the static data since dynamic imports don't work with JSON
+        const staticMerchandise: MerchandiseItem[] = [
+          {
+            id: "caveman-mechanics",
+            title: "Caveman Mechanics T-shirt",
+            description: "Soft and durable tee with the iconic Caveman Mechanics design featuring our mascot with thumbs up and \"MECH-AN-ICS\" lettering. Perfect for garage days!",
+            price: "$29.99",
+            image: "/images/caveman-race-team-brown.webp",
+            buyLink: "https://example.com/buy-caveman-mechanics",
+            shopifyProductId: undefined
+          },
+          {
+            id: "caveman-race-team",
+            title: "Caveman Race Team T-shirt",
+            description: "Premium cotton tee featuring our signature Caveman Race Team logo with the classic \"UGGA DUGGA\" car repair catchphrase. Available in multiple sizes.",
+            price: "$29.99",
+            image: "/images/rev3.png",
+            buyLink: "https://example.com/buy-caveman-race",
+            shopifyProductId: undefined
+          }
+        ];
         
-        setMerchandise(items);
+        setMerchandise(staticMerchandise);
         setError(null);
       } catch (err) {
         setError('Failed to load merchandise');

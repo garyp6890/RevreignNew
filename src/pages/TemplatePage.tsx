@@ -29,22 +29,29 @@ const TemplatePage: React.FC = () => {
       return;
     }
 
-    // Dynamically import the JSON file from src/data/templates/{slug}.json
-    import(`../data/templates/${slug}.json`)
-      .then((module) => {
-        const templateData: TemplateData = (module as any).default || module;
+    // Use fetch instead of dynamic import for production compatibility
+    const loadTemplate = async () => {
+      try {
+        const response = await fetch(`/src/data/templates/${slug}.json`);
+        if (!response.ok) {
+          throw new Error(`Template not found: ${response.status}`);
+        }
+        
+        const templateData: TemplateData = await response.json();
         if (!templateData.enabled) {
           setNotFound(true);
         } else {
           setData(templateData);
         }
-      })
-      .catch(() => {
+      } catch (error) {
+        console.error('Failed to load template:', error);
         setNotFound(true);
-      })
-      .finally(() => {
+      } finally {
         setLoading(false);
-      });
+      }
+    };
+
+    loadTemplate();
   }, [slug]);
 
   if (loading) {
@@ -57,7 +64,7 @@ const TemplatePage: React.FC = () => {
 
   if (notFound || !data) {
     // You can also render a 404 component instead of redirect
-    return <Navigate to="/404" replace />;
+    return <Navigate to="/" replace />;
   }
 
   return (
