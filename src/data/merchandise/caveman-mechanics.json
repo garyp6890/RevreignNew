@@ -4,6 +4,6 @@
   "price": "$29.99",
   "image": "/images/caveman-race-team-brown.webp",
   "buyLink": "https://example.com/buy-caveman-mechanics",
-  "shopifyProductId": "'",
-  "id": "'"
+  "shopifyProductId": "",
+  "id": ""
 }
