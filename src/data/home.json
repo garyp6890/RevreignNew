@@ -51,9 +51,9 @@
     "image": "https://images.unsplash.com/photo-1493238792000-8113da705763?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
     "altText": "Car Workshop",
     "stats": [
-      "13-17% average engagement rate on TikTok",
-      "30.81% reach rate on Instagram Reels",
-      "High audience retention on YouTube tutorials"
+      { "stat": "13-17% average engagement rate on TikTok" },
+      { "stat": "30.81% reach rate on Instagram Reels" },
+      { "stat": "High audience retention on YouTube tutorials" }
     ],
     "ctaText": "Learn About Partnerships"
   },

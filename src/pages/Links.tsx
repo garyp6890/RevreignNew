@@ -68,8 +68,8 @@ const Links: React.FC = () => {
                 {reasonBlock.title}
               </h2>
               <div className="space-y-4 text-gray-200">
-                {reasonBlock.paragraphs.map((paragraph, idx) => (
-                  <p key={idx}>{paragraph.text}</p>
+                {reasonBlock.paragraphs.map((paragraphObj, idx) => (
+                  <p key={idx}>{paragraphObj.text}</p>
                 ))}
               </div>
             </div>

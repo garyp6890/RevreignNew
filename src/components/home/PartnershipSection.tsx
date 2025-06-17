@@ -27,10 +27,10 @@ const PartnershipSection: React.FC<PartnershipSectionProps> = ({ partnerships })
                 Key Engagement Stats
               </h3>
               <ul className="space-y-2 text-gray-200">
-                {partnerships.stats.map((stat, idx) => (
+                {partnerships.stats.map((statObj, idx) => (
                   <li key={idx} className="flex items-center">
                     <span className="bg-rev-orange rounded-full p-1 mr-2"></span>
-                    {stat}
+                    {statObj.stat}
                   </li>
                 ))}
               </ul>

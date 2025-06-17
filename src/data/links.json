@@ -28,9 +28,9 @@
     "enabled": true,
     "title": "Why Follow Revreign?",
     "paragraphs": [
-      "Revreign stands out in the crowded world of social media influencers by combining technical expertise with creativity. Whether you're a seasoned mechanic or a casual car enthusiast, my content offers something for everyone.",
-      "From the viral \"Caveman Mechanics\" series to detailed turbocharger tutorials, I'm here to educate, entertain, and inspire your automotive journey.",
-      "Join our growing community of automotive enthusiasts who follow Revreign for laughs, learning, and all things cars!"
+      { "text": "Revreign stands out in the crowded world of social media influencers by combining technical expertise with creativity. Whether you're a seasoned mechanic or a casual car enthusiast, my content offers something for everyone." },
+      { "text": "From the viral \"Caveman Mechanics\" series to detailed turbocharger tutorials, I'm here to educate, entertain, and inspire your automotive journey." },
+      { "text": "Join our growing community of automotive enthusiasts who follow Revreign for laughs, learning, and all things cars!" }
     ]
   }
 }
