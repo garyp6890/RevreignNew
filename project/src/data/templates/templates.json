@@ -1,0 +1,12 @@
+{
+  "enabled": false,
+  "title": "Example Template",
+  "intro": "",
+  "body": "",
+  "ctaText": "",
+  "ctaLink": "",
+  "developerSettings": {
+    "warning": "⚠️ Only advanced users should touch this. Changing anything here may break the page layout.",
+    "experimentalFeatureToggle": false
+  }
+}
