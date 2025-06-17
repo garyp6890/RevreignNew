@@ -4,7 +4,7 @@ export function useJsonData<T>(filePath: string) {
   return useAsyncData<T>(
     async () => {
       try {
-        // Use fetch for both development and production
+        // Convert relative path to absolute path for fetch
         const cleanPath = filePath.replace('../data/', '/src/data/');
         const response = await fetch(cleanPath);
         
