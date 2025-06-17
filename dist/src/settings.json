@@ -1,5 +1,0 @@
-{
-  "favicon": "/vite.svg",
-  "llmTxt": "This is the content for /llm.txt - a file that provides information about the site for AI systems.",
-  "llmsTxt": "# LLMS.txt Manifest\n\nThis is a markdown manifest file that describes the site structure and content for language models.\n\n## Site Information\n\n- **Name**: Revreign\n- **Type**: Automotive Influencer Website\n- **Purpose**: Showcase automotive content, merchandise, and partnership opportunities\n\n## Key Pages\n\n- Homepage: Main landing page with hero, about, and featured content\n- Links: Social media links and follower information\n- Partnerships: Collaboration opportunities and past work\n- Amazon/Walmart Storefronts: Recommended tools and products\n- Merchandise: Caveman-themed apparel and accessories"
-}

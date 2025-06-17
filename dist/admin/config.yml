@@ -7,7 +7,7 @@ backend:
 media_folder: "public/images"
 public_folder: "/images"
 
-publish_mode: editorial_workflow
+# publish_mode: editorial_workflow
 
 collections:
   # ------------------------------------------------------------
@@ -37,60 +37,119 @@ collections:
   # ------------------------------------------------------------
   # 2) Homepage (src/data/home.json)
   # ------------------------------------------------------------
-  # ──────────────────────────────────────────────────────────────────────────
-# Homepage Collection (src/data/home.json)
-# ──────────────────────────────────────────────────────────────────────────
-- name: "home"
-  label: "Homepage"
-  files:
-    - label: "Homepage Content"
-      name: "home"
-      file: "src/data/home.json"
-      extension: "json"    # required for JSON write-back :contentReference[oaicite:4]{index=4}
-      format:    "json"    # ensures CMS parses/saves as JSON :contentReference[oaicite:5]{index=5}
-      fields:
-        - { label: "Title", name: "title", widget: "string", default: "Homepage" }
-        - { label: "Slug",  name: "slug",  widget: "string", default: "home" }
-        - { label: "Enable Homepage", name: "enabled", widget: "boolean", default: true }
-        # … your other fields (hero, about, featuredMerch, etc.) …
+  - name: "home"
+    label: "Homepage"
+    files:
+      - label: "Homepage Content"
+        name: "home"
+        file: "src/data/home.json"
+        extension: "json"
+        format: "json"
+        fields:
+          - { label: "Enable Homepage", name: "enabled", widget: "boolean", default: true }
+          - label: "Hero Section"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Enable Hero", name: "enabled", widget: "boolean", default: true }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Background Image", name: "backgroundImage", widget: "image" }
+              - { label: "Primary CTA Text", name: "cta1Text", widget: "string" }
+              - { label: "Secondary CTA Text", name: "cta2Text", widget: "string" }
+          - label: "About Section"
+            name: "about"
+            widget: "object"
+            fields:
+              - { label: "Enable About", name: "enabled", widget: "boolean", default: true }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Image", name: "image", widget: "image" }
+              - { label: "Image Alt Text", name: "altText", widget: "string" }
+              - { label: "Show Social Stats", name: "showSocialStats", widget: "boolean", default: true }
+          - label: "Featured Merchandise"
+            name: "featuredMerch"
+            widget: "object"
+            fields:
+              - { label: "Enable Merchandise", name: "enabled", widget: "boolean", default: true }
+              - { label: "Section Title", name: "title", widget: "string" }
+              - { label: "Section Description", name: "description", widget: "text" }
+              - label: "Items"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { label: "Image 1 URL", name: "image1", widget: "image" }
+                  - { label: "Image 2 URL", name: "image2", widget: "image" }
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Description", name: "description", widget: "text" }
+                  - { label: "Buy Link", name: "buyLink", widget: "string" }
+                  - { label: "CTA Text", name: "ctaText", widget: "string", default: "Buy Now" }
+          - label: "Partnership Section"
+            name: "partnerships"
+            widget: "object"
+            fields:
+              - { label: "Enable Partnerships", name: "enabled", widget: "boolean", default: true }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Image", name: "image", widget: "image" }
+              - { label: "Image Alt Text", name: "altText", widget: "string" }
+              - label: "Stats Bullets"
+                name: "stats"
+                widget: "list"
+                field: { label: "Stat Text", name: "stat", widget: "string" }
+              - { label: "CTA Text", name: "ctaText", widget: "string" }
+          - label: "Storefronts Section"
+            name: "storefronts"
+            widget: "object"
+            fields:
+              - { label: "Enable Storefronts", name: "enabled", widget: "boolean", default: true }
+              - { label: "Section Title", name: "title", widget: "string" }
+              - { label: "Section Description", name: "description", widget: "text" }
+              - label: "Items"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { label: "Card Label", name: "label", widget: "string" }
+                  - { label: "Destination URL", name: "linkTo", widget: "string" }
+                  - { label: "Card Image", name: "image", widget: "image" }
+                  - { label: "Description", name: "description", widget: "text" }
+                  - { label: "Link Button Text", name: "linkLabel", widget: "string" }
 
-# ──────────────────────────────────────────────────────────────────────────
-# Links Page Collection (src/data/links.json)
-# ──────────────────────────────────────────────────────────────────────────
-- name: "links"
-  label: "Links Page"
-  files:
-    - label: "Links Page Content"
-      name: "links"
-      file: "src/data/links.json"
-      extension: "json"
-      format:    "json"
-      fields:
-        - { label: "Title", name: "title", widget: "string", default: "Connect With Revreign" }
-        - { label: "Slug",  name: "slug",  widget: "string", default: "links" }
-        - { label: "Enable Page", name: "enabled", widget: "boolean", default: true }
-        - { label: "Page Title",  name: "pageTitle", widget: "string" }
-        - { label: "Intro Text",  name: "introText", widget: "text" }
-        - label: "Social Links"
-          name: "socialLinks"
-          widget: "list"
-          fields:
-            - { label: "Platform",  name: "platform",  widget: "string" }
-            - { label: "Username",  name: "username",  widget: "string" }
-            - { label: "Followers", name: "followers", widget: "string" }
-            - { label: "URL",       name: "url",       widget: "string" }
-        - label: "Why Follow Section"
-          name: "reasonBlock"
-          widget: "object"
-          fields:
-            - { label: "Enable Why Follow", name: "enabled", widget: "boolean", default: true }
-            - { label: "Section Title",     name: "title",   widget: "string" }
-            - label: "Paragraphs"
-              name: "paragraphs"
-              widget: "list"
-              fields:
-                - { label: "Text", name: "text", widget: "text" }
-        # … add SEO, body, FAQ fields if desired …
+  # ------------------------------------------------------------
+  # 3) Links Page (src/data/links.json)
+  # ------------------------------------------------------------
+  - name: "links"
+    label: "Links Page"
+    files:
+      - label: "Links Page Content"
+        name: "links"
+        file: "src/data/links.json"
+        extension: "json"
+        format: "json"
+        fields:
+          - { label: "Enable Page", name: "enabled", widget: "boolean", default: true }
+          - { label: "Page Title", name: "pageTitle", widget: "string" }
+          - { label: "Intro Text", name: "introText", widget: "text" }
+          - label: "Social Links"
+            name: "socialLinks"
+            widget: "list"
+            fields:
+              - { label: "Platform", name: "platform", widget: "string" }
+              - { label: "Username", name: "username", widget: "string" }
+              - { label: "Followers", name: "followers", widget: "string" }
+              - { label: "URL", name: "url", widget: "string" }
+          - label: "Why Follow Section"
+            name: "reasonBlock"
+            widget: "object"
+            fields:
+              - { label: "Enable Why Follow", name: "enabled", widget: "boolean", default: true }
+              - { label: "Section Title", name: "title", widget: "string" }
+              - label: "Paragraphs"
+                name: "paragraphs"
+                widget: "list"
+                field: { label: "Text", name: "text", widget: "text" }
+
   # ------------------------------------------------------------
   # 4) Partnerships Page (src/data/partnerships.json)
   # ------------------------------------------------------------
@@ -288,5 +347,5 @@ collections:
         name: "developerSettings"
         widget: "object"
         fields:
-          - { label: "Warning", name: "warning", widget: "text", default: "⚠️ Only advanced users should…" }
+          - { label: "Warning", name: "warning", widget: "text", default: "⚠️ Only advanced users should touch this. Changing anything here may break the page layout." }
           - { label: "Experimental Toggle", name: "experimentalFeatureToggle", widget: "boolean", default: false }
