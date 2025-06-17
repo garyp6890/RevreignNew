@@ -46,8 +46,6 @@ collections:
         extension: "json"
         format: "json"
         fields:
-          - { label: "Title", name: "title", widget: "string", default: "Homepage" }
-          - { label: "Slug", name: "slug", widget: "string", default: "home" }
           - { label: "Enable Homepage", name: "enabled", widget: "boolean", default: true }
           - label: "Hero Section"
             name: "hero"
@@ -99,8 +97,7 @@ collections:
               - label: "Stats Bullets"
                 name: "stats"
                 widget: "list"
-                fields:
-                  - { label: "Stat Text", name: "text", widget: "string" }
+                field: { label: "Stat Text", name: "stat", widget: "string" }
               - { label: "CTA Text", name: "ctaText", widget: "string" }
           - label: "Storefronts Section"
             name: "storefronts"
@@ -131,8 +128,6 @@ collections:
         extension: "json"
         format: "json"
         fields:
-          - { label: "Title", name: "title", widget: "string", default: "Connect With Revreign" }
-          - { label: "Slug", name: "slug", widget: "string", default: "links" }
           - { label: "Enable Page", name: "enabled", widget: "boolean", default: true }
           - { label: "Page Title", name: "pageTitle", widget: "string" }
           - { label: "Intro Text", name: "introText", widget: "text" }
@@ -153,8 +148,7 @@ collections:
               - label: "Paragraphs"
                 name: "paragraphs"
                 widget: "list"
-                fields:
-                  - { label: "Text", name: "text", widget: "text" }
+                field: { label: "Text", name: "text", widget: "text" }
 
   # ------------------------------------------------------------
   # 4) Partnerships Page (src/data/partnerships.json)
