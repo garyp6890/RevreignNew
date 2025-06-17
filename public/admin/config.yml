@@ -14,315 +14,324 @@ collections:
   # ------------------------------------------------------------
   - name: "home"
     label: "Homepage"
-    file: "src/data/home.json"
-    fields:
-      - label: "Enable Homepage"
-        name: "enabled"
-        widget: "boolean"
-        default: true
-        hint: "Toggle the entire homepage on/off."
-      - label: "Hero Section"
-        name: "hero"
-        widget: "object"
+    files:
+      - label: "Homepage Content"
+        name: "home"
+        file: "src/data/home.json"
         fields:
-          - { label: "Enable Hero", name: "enabled", widget: "boolean", default: true, hint: "Toggle Hero on/off." }
-          - { label: "Title", name: "title", widget: "string", hint: "Main headline text." }
-          - { label: "Subtitle", name: "subtitle", widget: "string", hint: "Subheadline beneath title." }
-          - { label: "Description", name: "description", widget: "text", hint: "Intro paragraph." }
-          - { label: "Background Image", name: "backgroundImage", widget: "image", hint: "Full-width background image URL or upload." }
-          - { label: "Primary CTA Text", name: "cta1Text", widget: "string", hint: "First button text." }
-          - { label: "Secondary CTA Text", name: "cta2Text", widget: "string", hint: "Second button text." }
-      - label: "About Section"
-        name: "about"
-        widget: "object"
-        fields:
-          - { label: "Enable About", name: "enabled", widget: "boolean", default: true, hint: "Toggle About on/off." }
-          - { label: "Title", name: "title", widget: "string", hint: "About section headline." }
-          - { label: "Description", name: "description", widget: "text", hint: "Paragraph about the brand/persona." }
-          - { label: "Image", name: "image", widget: "image", hint: "Image for About section." }
-          - { label: "Image Alt Text", name: "altText", widget: "string", required: false, hint: "Alternative text for the image." }
-          - { label: "Show Social Stats", name: "showSocialStats", widget: "boolean", default: true, hint: "Toggle the follower stats slider on/off." }
-      - label: "Featured Merchandise"
-        name: "featuredMerch"
-        widget: "object"
-        fields:
-          - { label: "Enable Merchandise", name: "enabled", widget: "boolean", default: true, hint: "Toggle this section on/off." }
-          - { label: "Section Title", name: "title", widget: "string", hint: "E.g. 'Caveman Collection'." }
-          - { label: "Section Description", name: "description", widget: "text", hint: "Intro text above merchandise slider." }
-          - label: "Items"
-            name: "items"
-            widget: "list"
+          - label: "Enable Homepage"
+            name: "enabled"
+            widget: "boolean"
+            default: true
+            hint: "Toggle the entire homepage on/off."
+          - label: "Hero Section"
+            name: "hero"
+            widget: "object"
             fields:
-              - { label: "Image 1 URL", name: "image1", widget: "image", hint: "Left-hand product image." }
-              - { label: "Image 2 URL", name: "image2", widget: "image", hint: "Right-hand product image." }
-              - { label: "Title", name: "title", widget: "string", hint: "Product name." }
-              - { label: "Description", name: "description", widget: "text", hint: "Product description." }
-              - { label: "Buy Link", name: "buyLink", widget: "string", hint: "Link or URL to purchase." }
-              - { label: "CTA Text", name: "ctaText", widget: "string", default: "Buy Now", hint: "Button text (e.g. 'Buy Now - $29.99')." }
-      - label: "Partnership Section"
-        name: "partnerships"
-        widget: "object"
-        fields:
-          - { label: "Enable Partnerships", name: "enabled", widget: "boolean", default: true, hint: "Toggle this section on/off." }
-          - { label: "Title", name: "title", widget: "string", hint: "Headline (e.g. 'Partner With Revreign')." }
-          - { label: "Description", name: "description", widget: "text", hint: "Paragraph describing partnership opportunities." }
-          - { label: "Image", name: "image", widget: "image", hint: "Image for partnership section." }
-          - { label: "Image Alt Text", name: "altText", widget: "string", required: false, hint: "Alt text for the partnership image." }
-          - label: "Stats Bullets"
-            name: "stats"
-            widget: "list"
+              - { label: "Enable Hero", name: "enabled", widget: "boolean", default: true, hint: "Toggle Hero on/off." }
+              - { label: "Title", name: "title", widget: "string", hint: "Main headline text." }
+              - { label: "Subtitle", name: "subtitle", widget: "string", hint: "Subheadline beneath title." }
+              - { label: "Description", name: "description", widget: "text", hint: "Intro paragraph." }
+              - { label: "Background Image", name: "backgroundImage", widget: "image", hint: "Full-width background image URL or upload." }
+              - { label: "Primary CTA Text", name: "cta1Text", widget: "string", hint: "First button text." }
+              - { label: "Secondary CTA Text", name: "cta2Text", widget: "string", hint: "Second button text." }
+          - label: "About Section"
+            name: "about"
+            widget: "object"
             fields:
-              - { label: "Stat Text", name: "text", widget: "string", hint: "E.g. '13-17% average engagement rate on TikTok'." }
-          - { label: "CTA Text", name: "ctaText", widget: "string", hint: "Button text (e.g. 'Learn About Partnerships')." }
-      - label: "Storefronts Section"
-        name: "storefronts"
-        widget: "object"
-        fields:
-          - { label: "Enable Storefronts", name: "enabled", widget: "boolean", default: true, hint: "Toggle this section on/off." }
-          - { label: "Section Title", name: "title", widget: "string", hint: "E.g. 'Shop My Recommended Tools'." }
-          - { label: "Section Description", name: "description", widget: "text", hint: "Paragraph above storefront cards." }
-          - label: "Items"
-            name: "items"
-            widget: "list"
+              - { label: "Enable About", name: "enabled", widget: "boolean", default: true, hint: "Toggle About on/off." }
+              - { label: "Title", name: "title", widget: "string", hint: "About section headline." }
+              - { label: "Description", name: "description", widget: "text", hint: "Paragraph about the brand/persona." }
+              - { label: "Image", name: "image", widget: "image", hint: "Image for About section." }
+              - { label: "Image Alt Text", name: "altText", widget: "string", required: false, hint: "Alternative text for the image." }
+              - { label: "Show Social Stats", name: "showSocialStats", widget: "boolean", default: true, hint: "Toggle the follower stats slider on/off." }
+          - label: "Featured Merchandise"
+            name: "featuredMerch"
+            widget: "object"
             fields:
-              - { label: "Card Label", name: "label", widget: "string", hint: "E.g. 'Amazon Storefront'." }
-              - { label: "Destination URL/Route", name: "linkTo", widget: "string", hint: "Where the button/link points (e.g. '/amazon')." }
-              - { label: "Card Image", name: "image", widget: "image", hint: "Image for storefront circle." }
-              - { label: "Description", name: "description", widget: "text", required: false, hint: "Brief text under the heading." }
-              - { label: "Link Button Text", name: "linkLabel", widget: "string", hint: "Text for the link button (e.g. 'Shop Amazon Picks')." }
-      - label: "⚠️ Developer Settings (Advanced Only)"
-        name: "developerSettings"
-        widget: "object"
-        fields:
-          - { label: "Warning", name: "warning", widget: "text", default: "⚠️ Only advanced users should touch this. Changing anything here may break the layout.", hint: "Do not edit unless you know exactly what you're doing." }
-          - { label: "Experimental Toggle", name: "experimentalFeatureToggle", widget: "boolean", default: false, hint: "Reserved for developer testing." }
+              - { label: "Enable Merchandise", name: "enabled", widget: "boolean", default: true, hint: "Toggle this section on/off." }
+              - { label: "Section Title", name: "title", widget: "string", hint: "E.g. 'Caveman Collection'." }
+              - { label: "Section Description", name: "description", widget: "text", hint: "Intro text above merchandise slider." }
+              - label: "Items"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { label: "Image 1 URL", name: "image1", widget: "image", hint: "Left-hand product image." }
+                  - { label: "Image 2 URL", name: "image2", widget: "image", hint: "Right-hand product image." }
+                  - { label: "Title", name: "title", widget: "string", hint: "Product name." }
+                  - { label: "Description", name: "description", widget: "text", hint: "Product description." }
+                  - { label: "Buy Link", name: "buyLink", widget: "string", hint: "Link or URL to purchase." }
+                  - { label: "CTA Text", name: "ctaText", widget: "string", default: "Buy Now", hint: "Button text (e.g. 'Buy Now - $29.99')." }
+          - label: "Partnership Section"
+            name: "partnerships"
+            widget: "object"
+            fields:
+              - { label: "Enable Partnerships", name: "enabled", widget: "boolean", default: true, hint: "Toggle this section on/off." }
+              - { label: "Title", name: "title", widget: "string", hint: "Headline (e.g. 'Partner With Revreign')." }
+              - { label: "Description", name: "description", widget: "text", hint: "Paragraph describing partnership opportunities." }
+              - { label: "Image", name: "image", widget: "image", hint: "Image for partnership section." }
+              - { label: "Image Alt Text", name: "altText", widget: "string", required: false, hint: "Alt text for the partnership image." }
+              - label: "Stats Bullets"
+                name: "stats"
+                widget: "list"
+                fields:
+                  - { label: "Stat Text", name: "text", widget: "string", hint: "E.g. '13-17% average engagement rate on TikTok'." }
+              - { label: "CTA Text", name: "ctaText", widget: "string", hint: "Button text (e.g. 'Learn About Partnerships')." }
+          - label: "Storefronts Section"
+            name: "storefronts"
+            widget: "object"
+            fields:
+              - { label: "Enable Storefronts", name: "enabled", widget: "boolean", default: true, hint: "Toggle this section on/off." }
+              - { label: "Section Title", name: "title", widget: "string", hint: "E.g. 'Shop My Recommended Tools'." }
+              - { label: "Section Description", name: "description", widget: "text", hint: "Paragraph above storefront cards." }
+              - label: "Items"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { label: "Card Label", name: "label", widget: "string", hint: "E.g. 'Amazon Storefront'." }
+                  - { label: "Destination URL/Route", name: "linkTo", widget: "string", hint: "Where the button/link points (e.g. '/amazon')." }
+                  - { label: "Card Image", name: "image", widget: "image", hint: "Image for storefront circle." }
+                  - { label: "Description", name: "description", widget: "text", required: false, hint: "Brief text under the heading." }
+                  - { label: "Link Button Text", name: "linkLabel", widget: "string", hint: "Text for the link button (e.g. 'Shop Amazon Picks')." }
+          - label: "⚠️ Developer Settings (Advanced Only)"
+            name: "developerSettings"
+            widget: "object"
+            fields:
+              - { label: "Warning", name: "warning", widget: "text", default: "⚠️ Only advanced users should touch this. Changing anything here may break the layout.", hint: "Do not edit unless you know exactly what you're doing." }
+              - { label: "Experimental Toggle", name: "experimentalFeatureToggle", widget: "boolean", default: false, hint: "Reserved for developer testing." }
 
   # ------------------------------------------------------------
   # 2) Links Page (src/data/links.json)
   # ------------------------------------------------------------
   - name: "links"
     label: "Links Page"
-    file: "src/data/links.json"
-    fields:
-      - { label: "Enable Page", name: "enabled", widget: "boolean", default: true, hint: "Toggle the entire Links page on/off." }
-      - { label: "Page Title", name: "pageTitle", widget: "string", hint: "Main heading (e.g. 'Connect With Revreign')." }
-      - { label: "Intro Text", name: "introText", widget: "text", hint: "Subheading paragraph under the page title." }
-      - label: "Social Links"
-        name: "socialLinks"
-        widget: "list"
+    files:
+      - label: "Links Page Content"
+        name: "links"
+        file: "src/data/links.json"
         fields:
-          - { label: "Platform", name: "platform", widget: "string", hint: "e.g. 'tiktok', 'instagram', or 'youtube'." }
-          - { label: "Username", name: "username", widget: "string", hint: "Your handle on that platform." }
-          - { label: "Followers", name: "followers", widget: "string", hint: "e.g. '185k followers' or '2.79k subscribers'." }
-          - { label: "URL", name: "url", widget: "string", hint: "Full profile URL (e.g. 'https://tiktok.com/@revreignofficial')." }
-      - label: "Why Follow Section"
-        name: "reasonBlock"
-        widget: "object"
-        fields:
-          - { label: "Enable \"Why Follow\"", name: "enabled", widget: "boolean", default: true, hint: "Toggle the 'Why Follow Revreign?' block on/off." }
-          - { label: "Section Title", name: "title", widget: "string", hint: "Heading text (e.g. 'Why Follow Revreign?')." }
-          - label: "Paragraphs"
-            name: "paragraphs"
+          - { label: "Enable Page", name: "enabled", widget: "boolean", default: true, hint: "Toggle the entire Links page on/off." }
+          - { label: "Page Title", name: "pageTitle", widget: "string", hint: "Main heading (e.g. 'Connect With Revreign')." }
+          - { label: "Intro Text", name: "introText", widget: "text", hint: "Subheading paragraph under the page title." }
+          - label: "Social Links"
+            name: "socialLinks"
             widget: "list"
             fields:
-              - { label: "Text", name: "text", widget: "text", hint: "One paragraph in the 'Why Follow' section." }
+              - { label: "Platform", name: "platform", widget: "string", hint: "e.g. 'tiktok', 'instagram', or 'youtube'." }
+              - { label: "Username", name: "username", widget: "string", hint: "Your handle on that platform." }
+              - { label: "Followers", name: "followers", widget: "string", hint: "e.g. '185k followers' or '2.79k subscribers'." }
+              - { label: "URL", name: "url", widget: "string", hint: "Full profile URL (e.g. 'https://tiktok.com/@revreignofficial')." }
+          - label: "Why Follow Section"
+            name: "reasonBlock"
+            widget: "object"
+            fields:
+              - { label: "Enable \"Why Follow\"", name: "enabled", widget: "boolean", default: true, hint: "Toggle the 'Why Follow Revreign?' block on/off." }
+              - { label: "Section Title", name: "title", widget: "string", hint: "Heading text (e.g. 'Why Follow Revreign?')." }
+              - label: "Paragraphs"
+                name: "paragraphs"
+                widget: "list"
+                fields:
+                  - { label: "Text", name: "text", widget: "text", hint: "One paragraph in the 'Why Follow' section." }
 
   # ------------------------------------------------------------
   # 3) Partnerships Page (src/data/partnerships.json)
   # ------------------------------------------------------------
   - name: "partnerships"
     label: "Partnership Page"
-    file: "src/data/partnerships.json"
-    fields:
-      - { label: "Enable Page", name: "enabled", widget: "boolean", default: true, hint: "Toggle the entire Partnerships page on/off." }
-      - label: "Hero Section"
-        name: "hero"
-        widget: "object"
+    files:
+      - label: "Partnership Page Content"
+        name: "partnerships"
+        file: "src/data/partnerships.json"
         fields:
-          - { label: "Enable Hero", name: "enabled", widget: "boolean", default: true, hint: "Toggle Hero section on/off." }
-          - { label: "Title", name: "title", widget: "string", hint: "Main heading (e.g. 'Partnerships & Sponsorships')." }
-          - { label: "Subtitle", name: "subtitle", widget: "text", hint: "Paragraph under the heading." }
-          - { label: "Background Image", name: "backgroundImage", widget: "image", hint: "Hero background, low-opacity overlay is applied automatically." }
-          - { label: "Contact Email (mailto)", name: "contactMailto", widget: "string", hint: "Use 'mailto:youremail@example.com' for the button." }
-          - { label: "Contact Button Text", name: "contactButtonText", widget: "string", hint: "e.g. 'Contact Me for Sponsorships'." }
-      - label: "Audience & Engagement Stats"
-        name: "statsSection"
-        widget: "object"
-        fields:
-          - { label: "Enable Stats Section", name: "enabled", widget: "boolean", default: true, hint: "Toggle this section on/off." }
-          - { label: "Section Title", name: "title", widget: "string", hint: "e.g. 'Audience & Engagement'." }
-          - label: "Stats Items"
-            name: "items"
-            widget: "list"
+          - { label: "Enable Page", name: "enabled", widget: "boolean", default: true, hint: "Toggle the entire Partnerships page on/off." }
+          - label: "Hero Section"
+            name: "hero"
+            widget: "object"
             fields:
-              - { label: "Icon", name: "icon", widget: "select", options: ["users", "trendingUp", "checkSquare"], hint: "Choose 'users', 'trendingUp', or 'checkSquare'." }
-              - { label: "Stat Value", name: "statValue", widget: "string", hint: "e.g. '290k+' or '13-17%'." }
-              - { label: "Stat Label", name: "statLabel", widget: "string", hint: "e.g. 'Total Followers' or 'Engagement Rate'." }
-              - { label: "Stat Sub-Label", name: "statSubLabel", widget: "string", required: false, hint: "Optional smaller text below the label." }
-      - label: "Past Collaborations"
-        name: "pastWork"
-        widget: "object"
-        fields:
-          - { label: "Enable Past Work Section", name: "enabled", widget: "boolean", default: true, hint: "Toggle this section on/off." }
-          - { label: "Section Title", name: "title", widget: "string", hint: "e.g. 'Past Collaborations'." }
-          - label: "Past Work Items"
-            name: "items"
-            widget: "list"
+              - { label: "Enable Hero", name: "enabled", widget: "boolean", default: true, hint: "Toggle Hero section on/off." }
+              - { label: "Title", name: "title", widget: "string", hint: "Main heading (e.g. 'Partnerships & Sponsorships')." }
+              - { label: "Subtitle", name: "subtitle", widget: "text", hint: "Paragraph under the heading." }
+              - { label: "Background Image", name: "backgroundImage", widget: "image", hint: "Hero background, low-opacity overlay is applied automatically." }
+              - { label: "Contact Email (mailto)", name: "contactMailto", widget: "string", hint: "Use 'mailto:youremail@example.com' for the button." }
+              - { label: "Contact Button Text", name: "contactButtonText", widget: "string", hint: "e.g. 'Contact Me for Sponsorships'." }
+          - label: "Audience & Engagement Stats"
+            name: "statsSection"
+            widget: "object"
             fields:
-              - { label: "Image", name: "image", widget: "image", hint: "Image showcasing this project." }
-              - { label: "Alt Text", name: "altText", widget: "string", required: false, hint: "Alt text for the image." }
-              - { label: "Title", name: "title", widget: "string", hint: "Project name (e.g. 'Welding Tools Showcase')." }
-              - { label: "Description", name: "description", widget: "text", hint: "Brief description of the project." }
-              - { label: "Icon", name: "icon", widget: "select", options: ["trendingUp"], hint: "Use 'trendingUp' for stats icon." }
-              - { label: "Stat Text", name: "statText", widget: "string", hint: "e.g. '22% engagement rate'." }
-      - label: "Upcoming Projects"
-        name: "upcomingProjects"
-        widget: "object"
-        fields:
-          - { label: "Enable Upcoming Projects", name: "enabled", widget: "boolean", default: true, hint: "Toggle this section on/off." }
-          - { label: "Section Title", name: "title", widget: "string", hint: "e.g. 'Upcoming Projects'." }
-          - label: "Project Items"
-            name: "items"
-            widget: "list"
-            fields:
-              - { label: "Icon", name: "icon", widget: "select", options: ["calendar"], hint: "Use 'calendar' for upcoming items." }
-              - { label: "Title", name: "title", widget: "string", hint: "Project headline." }
-              - { label: "Description", name: "description", widget: "text", hint: "Brief description of this upcoming project." }
-      - label: "Partnership Rate Card"
-        name: "rateCard"
-        widget: "object"
-        fields:
-          - { label: "Enable Rate Card Section", name: "enabled", widget: "boolean", default: true, hint: "Toggle this section on/off." }
-          - { label: "Section Title", name: "title", widget: "string", hint: "e.g. 'Partnership Rates'." }
-          - { label: "Intro Text", name: "introText", widget: "text", hint: "Paragraph explaining the rates." }
-          - label: "Rate Items"
-            name: "items"
-            widget: "list"
-            fields:
-              - { label: "Platform", name: "platform", widget: "string", hint: "e.g. 'TikTok & Instagram' or 'YouTube'." }
-              - label: "Rates"
-                name: "rates"
+              - { label: "Enable Stats Section", name: "enabled", widget: "boolean", default: true, hint: "Toggle this section on/off." }
+              - { label: "Section Title", name: "title", widget: "string", hint: "e.g. 'Audience & Engagement'." }
+              - label: "Stats Items"
+                name: "items"
                 widget: "list"
                 fields:
-                  - { label: "Label", name: "label", widget: "string", hint: "e.g. 'Single Post/Reel' or 'Dedicated Review'." }
-                  - { label: "Value", name: "value", widget: "string", hint: "e.g. '$500+' or '$1,000+'." }
-          - { label: "Contact Email (mailto)", name: "contactMailto", widget: "string", hint: "Use 'mailto:youremail@example.com' for the contact button." }
-          - { label: "Contact Button Text", name: "contactButtonText", widget: "string", hint: "e.g. 'Contact For Custom Quote'." }
-          - { label: "Download Link URL", name: "downloadLink", widget: "string", hint: "URL to your downloadable rate card PDF." }
-          - { label: "Download Button Text", name: "downloadButtonText", widget: "string", hint: "e.g. 'Download Full Rate Card'." }
-      - label: "Contact CTA Section"
-        name: "contactCTA"
-        widget: "object"
-        fields:
-          - { label: "Enable Contact CTA", name: "enabled", widget: "boolean", default: true, hint: "Toggle this section on/off." }
-          - { label: "CTA Title", name: "title", widget: "string", hint: "e.g. 'Ready to Collaborate?'." }
-          - { label: "CTA Description", name: "description", widget: "text", hint: "Paragraph encouraging contact." }
-          - { label: "Contact Email (mailto)", name: "contactMailto", widget: "string", hint: "Use 'mailto:youremail@example.com' for the button." }
-          - { label: "Contact Button Text", name: "contactButtonText", widget: "string", hint: "e.g. 'revreignauto@gmail.com'." }
-      - label: "⚠️ Developer Settings (Advanced Only)"
-        name: "developerSettings"
-        widget: "object"
-        fields:
-          - { label: "Warning", name: "warning", widget: "text", default: "⚠️ Only advanced users should touch this. Changing anything here may break the layout.", hint: "Do not edit unless you know exactly what you're doing." }
-          - { label: "Experimental Toggle", name: "experimentalFeatureToggle", widget: "boolean", default: false, hint: "Reserved for developer testing." }
+                  - { label: "Icon", name: "icon", widget: "select", options: ["users", "trendingUp", "checkSquare"], hint: "Choose 'users', 'trendingUp', or 'checkSquare'." }
+                  - { label: "Stat Value", name: "statValue", widget: "string", hint: "e.g. '290k+' or '13-17%'." }
+                  - { label: "Stat Label", name: "statLabel", widget: "string", hint: "e.g. 'Total Followers' or 'Engagement Rate'." }
+                  - { label: "Stat Sub-Label", name: "statSubLabel", widget: "string", required: false, hint: "Optional smaller text below the label." }
+          - label: "Past Collaborations"
+            name: "pastWork"
+            widget: "object"
+            fields:
+              - { label: "Enable Past Work Section", name: "enabled", widget: "boolean", default: true, hint: "Toggle this section on/off." }
+              - { label: "Section Title", name: "title", widget: "string", hint: "e.g. 'Past Collaborations'." }
+              - label: "Past Work Items"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { label: "Image", name: "image", widget: "image", hint: "Image showcasing this project." }
+                  - { label: "Alt Text", name: "altText", widget: "string", required: false, hint: "Alt text for the image." }
+                  - { label: "Title", name: "title", widget: "string", hint: "Project name (e.g. 'Welding Tools Showcase')." }
+                  - { label: "Description", name: "description", widget: "text", hint: "Brief description of the project." }
+                  - { label: "Icon", name: "icon", widget: "select", options: ["trendingUp"], hint: "Use 'trendingUp' for stats icon." }
+                  - { label: "Stat Text", name: "statText", widget: "string", hint: "e.g. '22% engagement rate'." }
+          - label: "Upcoming Projects"
+            name: "upcomingProjects"
+            widget: "object"
+            fields:
+              - { label: "Enable Upcoming Projects", name: "enabled", widget: "boolean", default: true, hint: "Toggle this section on/off." }
+              - { label: "Section Title", name: "title", widget: "string", hint: "e.g. 'Upcoming Projects'." }
+              - label: "Project Items"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { label: "Icon", name: "icon", widget: "select", options: ["calendar"], hint: "Use 'calendar' for upcoming items." }
+                  - { label: "Title", name: "title", widget: "string", hint: "Project headline." }
+                  - { label: "Description", name: "description", widget: "text", hint: "Brief description of this upcoming project." }
+          - label: "Partnership Rate Card"
+            name: "rateCard"
+            widget: "object"
+            fields:
+              - { label: "Enable Rate Card Section", name: "enabled", widget: "boolean", default: true, hint: "Toggle this section on/off." }
+              - { label: "Section Title", name: "title", widget: "string", hint: "e.g. 'Partnership Rates'." }
+              - { label: "Intro Text", name: "introText", widget: "text", hint: "Paragraph explaining the rates." }
+              - label: "Rate Items"
+                name: "items"
+                widget: "list"
+                fields:
+                  - { label: "Platform", name: "platform", widget: "string", hint: "e.g. 'TikTok & Instagram' or 'YouTube'." }
+                  - label: "Rates"
+                    name: "rates"
+                    widget: "list"
+                    fields:
+                      - { label: "Label", name: "label", widget: "string", hint: "e.g. 'Single Post/Reel' or 'Dedicated Review'." }
+                      - { label: "Value", name: "value", widget: "string", hint: "e.g. '$500+' or '$1,000+'." }
+              - { label: "Contact Email (mailto)", name: "contactMailto", widget: "string", hint: "Use 'mailto:youremail@example.com' for the contact button." }
+              - { label: "Contact Button Text", name: "contactButtonText", widget: "string", hint: "e.g. 'Contact For Custom Quote'." }
+              - { label: "Download Link URL", name: "downloadLink", widget: "string", hint: "URL to your downloadable rate card PDF." }
+              - { label: "Download Button Text", name: "downloadButtonText", widget: "string", hint: "e.g. 'Download Full Rate Card'." }
+          - label: "Contact CTA Section"
+            name: "contactCTA"
+            widget: "object"
+            fields:
+              - { label: "Enable Contact CTA", name: "enabled", widget: "boolean", default: true, hint: "Toggle this section on/off." }
+              - { label: "CTA Title", name: "title", widget: "string", hint: "e.g. 'Ready to Collaborate?'." }
+              - { label: "CTA Description", name: "description", widget: "text", hint: "Paragraph encouraging contact." }
+              - { label: "Contact Email (mailto)", name: "contactMailto", widget: "string", hint: "Use 'mailto:youremail@example.com' for the button." }
+              - { label: "Contact Button Text", name: "contactButtonText", widget: "string", hint: "e.g. 'revreignauto@gmail.com'." }
+          - label: "⚠️ Developer Settings (Advanced Only)"
+            name: "developerSettings"
+            widget: "object"
+            fields:
+              - { label: "Warning", name: "warning", widget: "text", default: "⚠️ Only advanced users should touch this. Changing anything here may break the layout.", hint: "Do not edit unless you know exactly what you're doing." }
+              - { label: "Experimental Toggle", name: "experimentalFeatureToggle", widget: "boolean", default: false, hint: "Reserved for developer testing." }
 
   # ------------------------------------------------------------
   # 4) Amazon Storefront (src/data/amazon.json)
   # ------------------------------------------------------------
   - name: "amazon"
     label: "Amazon Storefront"
-    file: "src/data/amazon.json"
-    fields:
-      - { label: "Enable Amazon Page", name: "enabled", widget: "boolean", default: true, hint: "Toggle the entire Amazon page on/off." }
-      - { label: "Page Title", name: "pageTitle", widget: "string", hint: "Main heading (e.g. 'Amazon Storefront')." }
-      - { label: "Intro Text", name: "introText", widget: "text", hint: "Paragraph below heading." }
-
-      - label: "Banner Section"
-        name: "banner"
-        widget: "object"
+    files:
+      - label: "Amazon Storefront Content"
+        name: "amazon"
+        file: "src/data/amazon.json"
         fields:
-          - { label: "Enable Banner", name: "enabled", widget: "boolean", default: true, hint: "Toggle banner on/off." }
-          - { label: "Banner Title", name: "title", widget: "string", hint: "E.g. 'Shop My Complete Collection'." }
-          - { label: "Banner Description", name: "description", widget: "text", hint: "Paragraph under banner title." }
-          - { label: "Banner Image", name: "imageUrl", widget: "image", hint: "Upload or paste a URL for banner image." }
-          - { label: "Banner Alt Text", name: "altText", widget: "string", required: false, hint: "Alt text for accessibility." }
-          - { label: "Store Link (URL)", name: "storeLink", widget: "string", hint: "Full URL to your Amazon storefront." }
-          - { label: "Banner Button Text", name: "buttonText", widget: "string", hint: "E.g. 'Shop My Amazon Storefront'." }
-
-      - label: "Product Categories"
-        name: "categories"
-        widget: "list"
-        fields:
-          - { label: "Enable Category", name: "enabled", widget: "boolean", default: true, hint: "Toggle this category on/off." }
-          - { label: "Category Title", name: "title", widget: "string", hint: "E.g. 'Must-Have Tools'." }
-          - { label: "Category Description", name: "description", widget: "text", hint: "Paragraph describing category." }
-          - { label: "Category Link (URL)", name: "categoryLink", widget: "string", hint: "Full link to this collection on Amazon." }
-          - label: "Products"
-            name: "products"
+          - { label: "Enable Amazon Page", name: "enabled", widget: "boolean", default: true, hint: "Toggle the entire Amazon page on/off." }
+          - { label: "Page Title", name: "pageTitle", widget: "string", hint: "Main heading (e.g. 'Amazon Storefront')." }
+          - { label: "Intro Text", name: "introText", widget: "text", hint: "Paragraph below heading." }
+          - label: "Banner Section"
+            name: "banner"
+            widget: "object"
+            fields:
+              - { label: "Enable Banner", name: "enabled", widget: "boolean", default: true, hint: "Toggle banner on/off." }
+              - { label: "Banner Title", name: "title", widget: "string", hint: "E.g. 'Shop My Complete Collection'." }
+              - { label: "Banner Description", name: "description", widget: "text", hint: "Paragraph under banner title." }
+              - { label: "Banner Image", name: "imageUrl", widget: "image", hint: "Upload or paste a URL for banner image." }
+              - { label: "Banner Alt Text", name: "altText", widget: "string", required: false, hint: "Alt text for accessibility." }
+              - { label: "Store Link (URL)", name: "storeLink", widget: "string", hint: "Full URL to your Amazon storefront." }
+              - { label: "Banner Button Text", name: "buttonText", widget: "string", hint: "E.g. 'Shop My Amazon Storefront'." }
+          - label: "Product Categories"
+            name: "categories"
             widget: "list"
             fields:
-              - { label: "Product ID", name: "id", widget: "string", hint: "Unique identifier for this product." }
-              - { label: "Name", name: "name", widget: "string", hint: "Product name." }
-              - { label: "Description", name: "description", widget: "text", hint: "Short product description." }
-              - { label: "Price", name: "price", widget: "string", hint: "Product price (e.g. '$49.99')." }
-              - { label: "Image URL", name: "imageUrl", widget: "image", hint: "Upload or paste product image URL." }
-              - { label: "Affiliate Link", name: "link", widget: "string", hint: "Full Amazon URL for product." }
-
-      - label: "⚠️ Developer Settings (Advanced Only)"
-        name: "developerSettings"
-        widget: "object"
-        fields:
-          - { label: "Warning", name: "warning", widget: "text", default: "⚠️ Only advanced users should touch this. Changing anything here may break the layout.", hint: "Do not edit unless you know exactly what you're doing." }
-          - { label: "Experimental Toggle", name: "experimentalFeatureToggle", widget: "boolean", default: false, hint: "Reserved for developer testing." }
+              - { label: "Enable Category", name: "enabled", widget: "boolean", default: true, hint: "Toggle this category on/off." }
+              - { label: "Category Title", name: "title", widget: "string", hint: "E.g. 'Must-Have Tools'." }
+              - { label: "Category Description", name: "description", widget: "text", hint: "Paragraph describing category." }
+              - { label: "Category Link (URL)", name: "categoryLink", widget: "string", hint: "Full link to this collection on Amazon." }
+              - label: "Products"
+                name: "products"
+                widget: "list"
+                fields:
+                  - { label: "Product ID", name: "id", widget: "string", hint: "Unique identifier for this product." }
+                  - { label: "Name", name: "name", widget: "string", hint: "Product name." }
+                  - { label: "Description", name: "description", widget: "text", hint: "Short product description." }
+                  - { label: "Price", name: "price", widget: "string", hint: "Product price (e.g. '$49.99')." }
+                  - { label: "Image URL", name: "imageUrl", widget: "image", hint: "Upload or paste product image URL." }
+                  - { label: "Affiliate Link", name: "link", widget: "string", hint: "Full Amazon URL for product." }
+          - label: "⚠️ Developer Settings (Advanced Only)"
+            name: "developerSettings"
+            widget: "object"
+            fields:
+              - { label: "Warning", name: "warning", widget: "text", default: "⚠️ Only advanced users should touch this. Changing anything here may break the layout.", hint: "Do not edit unless you know exactly what you're doing." }
+              - { label: "Experimental Toggle", name: "experimentalFeatureToggle", widget: "boolean", default: false, hint: "Reserved for developer testing." }
 
   # ------------------------------------------------------------
   # 5) Walmart Storefront (src/data/walmart.json)
   # ------------------------------------------------------------
   - name: "walmart"
     label: "Walmart Storefront"
-    file: "src/data/walmart.json"
-    fields:
-      - { label: "Enable Walmart Page", name: "enabled", widget: "boolean", default: true, hint: "Toggle the entire Walmart page on/off." }
-      - { label: "Page Title", name: "pageTitle", widget: "string", hint: "Main heading (e.g. 'Walmart Storefront')." }
-      - { label: "Intro Text", name: "introText", widget: "text", hint: "Paragraph below heading." }
-
-      - label: "Banner Section"
-        name: "banner"
-        widget: "object"
+    files:
+      - label: "Walmart Storefront Content"
+        name: "walmart"
+        file: "src/data/walmart.json"
         fields:
-          - { label: "Enable Banner", name: "enabled", widget: "boolean", default: true, hint: "Toggle banner on/off." }
-          - { label: "Banner Title", name: "title", widget: "string", hint: "E.g. 'Budget-Friendly Auto Tools'." }
-          - { label: "Banner Description", name: "description", widget: "text", hint: "Paragraph under banner title." }
-          - { label: "Banner Image", name: "imageUrl", widget: "image", hint: "Upload or paste a URL for banner image." }
-          - { label: "Banner Alt Text", name: "altText", widget: "string", required: false, hint: "Alt text for accessibility." }
-          - { label: "Store Link (URL)", name: "storeLink", widget: "string", hint: "Full URL to your Walmart storefront." }
-          - { label: "Banner Button Text", name: "buttonText", widget: "string", hint: "E.g. 'Shop My Walmart Picks'." }
-
-      - label: "Product Categories"
-        name: "categories"
-        widget: "list"
-        fields:
-          - { label: "Enable Category", name: "enabled", widget: "boolean", default: true, hint: "Toggle this category on/off." }
-          - { label: "Category Title", name: "title", widget: "string", hint: "E.g. 'Affordable Must-Have Tools'." }
-          - { label: "Category Description", name: "description", widget: "text", hint: "Paragraph describing category." }
-          - { label: "Category Link (URL)", name: "categoryLink", widget: "string", hint: "Full link to this collection on Walmart." }
-          - label: "Products"
-            name: "products"
+          - { label: "Enable Walmart Page", name: "enabled", widget: "boolean", default: true, hint: "Toggle the entire Walmart page on/off." }
+          - { label: "Page Title", name: "pageTitle", widget: "string", hint: "Main heading (e.g. 'Walmart Storefront')." }
+          - { label: "Intro Text", name: "introText", widget: "text", hint: "Paragraph below heading." }
+          - label: "Banner Section"
+            name: "banner"
+            widget: "object"
+            fields:
+              - { label: "Enable Banner", name: "enabled", widget: "boolean", default: true, hint: "Toggle banner on/off." }
+              - { label: "Banner Title", name: "title", widget: "string", hint: "E.g. 'Budget-Friendly Auto Tools'." }
+              - { label: "Banner Description", name: "description", widget: "text", hint: "Paragraph under banner title." }
+              - { label: "Banner Image", name: "imageUrl", widget: "image", hint: "Upload or paste a URL for banner image." }
+              - { label: "Banner Alt Text", name: "altText", widget: "string", required: false, hint: "Alt text for accessibility." }
+              - { label: "Store Link (URL)", name: "storeLink", widget: "string", hint: "Full URL to your Walmart storefront." }
+              - { label: "Banner Button Text", name: "buttonText", widget: "string", hint: "E.g. 'Shop My Walmart Picks'." }
+          - label: "Product Categories"
+            name: "categories"
             widget: "list"
             fields:
-              - { label: "Product ID", name: "id", widget: "string", hint: "Unique identifier for this product." }
-              - { label: "Name", name: "name", widget: "string", hint: "Product name." }
-              - { label: "Description", name: "description", widget: "text", hint: "Short product description." }
-              - { label: "Price", name: "price", widget: "string", hint: "Product price (e.g. '$39.99')." }
-              - { label: "Image URL", name: "imageUrl", widget: "image", hint: "Upload or paste product image URL." }
-              - { label: "Affiliate Link", name: "link", widget: "string", hint: "Full Walmart URL for product." }
-
-      - label: "⚠️ Developer Settings (Advanced Only)"
-        name: "developerSettings"
-        widget: "object"
-        fields:
-          - { label: "Warning", name: "warning", widget: "text", default: "⚠️ Only advanced users should touch this. Changing anything here may break the layout.", hint: "Do not edit unless you know exactly what you're doing." }
-          - { label: "Experimental Toggle", name: "experimentalFeatureToggle", widget: "boolean", default: false, hint: "Reserved for developer testing." }
+              - { label: "Enable Category", name: "enabled", widget: "boolean", default: true, hint: "Toggle this category on/off." }
+              - { label: "Category Title", name: "title", widget: "string", hint: "E.g. 'Affordable Must-Have Tools'." }
+              - { label: "Category Description", name: "description", widget: "text", hint: "Paragraph describing category." }
+              - { label: "Category Link (URL)", name: "categoryLink", widget: "string", hint: "Full link to this collection on Walmart." }
+              - label: "Products"
+                name: "products"
+                widget: "list"
+                fields:
+                  - { label: "Product ID", name: "id", widget: "string", hint: "Unique identifier for this product." }
+                  - { label: "Name", name: "name", widget: "string", hint: "Product name." }
+                  - { label: "Description", name: "description", widget: "text", hint: "Short product description." }
+                  - { label: "Price", name: "price", widget: "string", hint: "Product price (e.g. '$39.99')." }
+                  - { label: "Image URL", name: "imageUrl", widget: "image", hint: "Upload or paste product image URL." }
+                  - { label: "Affiliate Link", name: "link", widget: "string", hint: "Full Walmart URL for product." }
+          - label: "⚠️ Developer Settings (Advanced Only)"
+            name: "developerSettings"
+            widget: "object"
+            fields:
+              - { label: "Warning", name: "warning", widget: "text", default: "⚠️ Only advanced users should touch this. Changing anything here may break the layout.", hint: "Do not edit unless you know exactly what you're doing." }
+              - { label: "Experimental Toggle", name: "experimentalFeatureToggle", widget: "boolean", default: false, hint: "Reserved for developer testing." }
 
   # ------------------------------------------------------------
   # 6) Merchandise (folder: src/data/merchandise)
