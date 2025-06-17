@@ -1,19 +1,16 @@
 {
   "enabled": true,
-
   "pageTitle": "Amazon Storefront",
   "introText": "Explore curated tools and products for DIY car projects—all handpicked by Revreign to help you fix your vehicle on a budget. These affiliate links support my work at no extra cost to you!",
-
   "banner": {
     "enabled": true,
     "title": "Shop My Complete Collection",
     "description": "Visit my Amazon storefront to browse all my recommended products in one place. From basic tools to advanced equipment, I've curated everything you need for your automotive projects.",
     "imageUrl": "https://images.unsplash.com/photo-1583121274602-3e2820c69888?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-    "altText": "Amazon Storefront",
+    "altText": "Amazon Storefronta",
     "storeLink": "https://amazon.com",
     "buttonText": "Shop My Amazon Storefront"
   },
-
   "categories": [
     {
       "enabled": true,
@@ -144,7 +141,6 @@
       ]
     }
   ],
-
   "developerSettings": {
     "warning": "⚠️ Only advanced users should touch this. Changing anything here may break the layout.",
     "experimentalFeatureToggle": false
